@@ -1,0 +1,48 @@
+
+.newletter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-flow: column;
+    height: 100%;
+}
+
+.newletter .info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    height: 60vh;
+    width: 70vw;
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 20px;
+}
+
+.newletter .info > * {
+    width: 100%;
+}
+
+.newletter .info textarea{
+    border: 1px solid black;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.newletter .info input {
+    border: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.newletter .info button {
+    border-bottom: 1px solid black;
+    height: 30px;
+}
+.newletter .state {
+    height: 5vh;
+    width: 70vw;
+    padding: 20px;
+    border: 1px solid black;
+}

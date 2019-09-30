@@ -1,0 +1,44 @@
+.home {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 247, 243);
+  }
+  
+  .home header { 
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+
+.home .home-menu{
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 30vw 30vw;
+    grid-gap: 10px 10px;
+}
+
+.home .home-menu > * {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.home .home-menu .newLetter{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.home .home-menu .myGiftToOther{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+
+.home .home-menu .myLetter{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
