@@ -2,10 +2,11 @@
 .newletter {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 
     flex-flow: column;
-    height: 100%;
+    min-height: calc(100% - 40px);
+    padding: 20px;
 }
 
 .newletter .info {

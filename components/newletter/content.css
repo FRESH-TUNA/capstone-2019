@@ -1,32 +1,32 @@
-.newletter .content {
+.content {
     display: flex;
     flex-flow: column;
     align-items: center;
 
-    height: 60vh;
+    flex-grow: 1;
     width: 70vw;
     border: 1px solid black;
     margin: 10px 0px;
     padding: 20px;
 }
 
-.newletter .content > * {
+.content > * {
     width: 100%;
 }
 
-.newletter .content textarea{
+.content textarea{
     border: 1px solid black;
     flex-grow: 1;
     margin-bottom: 10px;
 }
 
-.newletter .content input {
+.content input {
     border: none;
     border-bottom: 2px solid black;
     margin-bottom: 10px;
 }
 
-.newletter .content button {
+.content button {
     border-bottom: 1px solid black;
     height: 30px;
 }
