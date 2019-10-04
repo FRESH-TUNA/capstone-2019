@@ -28,7 +28,7 @@ class Content extends React.Component {
                         
                     </div>
                 </div>
-                <button>다음 단계</button>
+                <button onClick={() => this.props.setComponentState(2)}>다음 단계</button>
             </div>
         )
     }

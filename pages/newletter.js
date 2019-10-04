@@ -23,18 +23,23 @@ class WriteLetter extends React.Component {
     super(props)
     this.state = { componentState: 0 }
     this.getComponent = this.getComponent.bind(this)
+    this.setComponentState = this.setComponentState.bind(this)
   }
 
+  setComponentState(index) {
+    this.setState({componentState: index})
+  }
+  
   getComponent() {
     switch (this.state.componentState) {
       case 0:
-        return <Content/>
+        return <Content setComponentState={this.setComponentState} />
       case 1:
-        return <Template/>
+        return <Template setComponentState={this.setComponentState}/>
       case 2:
-        return <Check/>
+        return <Check setComponentState={this.setComponentState}/>
       case 3:
-        return <Complete/>
+        return <Complete setComponentState={this.setComponentState}/>
     }
   }
 

@@ -23,7 +23,7 @@ class Content extends React.Component {
                 <input type="text" placeholder="시간"/>
                 <label for="jb-input-text">메세지</label>
                 <textarea></textarea>
-                <button>다음 단계</button>
+                <button onClick={() => this.props.setComponentState(1)}>다음 단계</button>
             </div>
         )
     }

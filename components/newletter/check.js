@@ -25,7 +25,7 @@ class Content extends React.Component {
                     <input type="text" placeholder="장소"/>
                     <input type="text" placeholder="시간"/>
                 </div>
-                <button>만들기</button>
+                <button onClick={() => this.props.setComponentState(3)}>만들기</button>
             </div>
         )
     }
