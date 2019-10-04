@@ -13,7 +13,9 @@ class Index extends React.Component {
         <Header />
         <h1>서비스</h1>
         <div className="home-menu">
-          <Link href="/newletter"><button className="newLetter">새 청첩장</button></Link>
+          <Link prefetch as={`/newletter/content`} href={`/newletter?componentState=content`}>
+            <button className="newLetter">새로운 청첩장</button>
+          </Link>
           <Link href="/myletter"><button className="myLetter">내 청첩장</button></Link>
           <Link href="/mygift"><button className="myGiftToOther">선물한 내역</button></Link>
         </div>

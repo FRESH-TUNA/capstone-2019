@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Link from 'next/link'
 import { bindActionCreators } from 'redux'
 import * as NewLetterStore from '../../states/newLetterStore/newLetterAction'
 
@@ -23,7 +24,9 @@ class Content extends React.Component {
                 <input type="text" placeholder="시간"/>
                 <label for="jb-input-text">메세지</label>
                 <textarea></textarea>
-                <button onClick={() => this.props.setComponentState(1)}>다음 단계</button>
+                <Link prefetch as={`/newletter/template`} href={`/newletter?componentState=template`}>
+                    <button>다음 단계</button>
+                </Link>
             </div>
         )
     }

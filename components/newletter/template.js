@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import * as NewLetterStore from '../../states/newLetterStore/newLetterAction'
+import Link from 'next/link'
 
 import './template.css'
 
@@ -28,7 +27,12 @@ class Content extends React.Component {
                         
                     </div>
                 </div>
-                <button onClick={() => this.props.setComponentState(2)}>다음 단계</button>
+                <Link prefetch as={`/newletter/content`} href={`/newletter?componentState=content`}>
+                    <button>이전 단계</button>
+                </Link>
+                <Link prefetch as={`/newletter/check`} href={`/newletter?componentState=check`}>
+                    <button>다음 단계</button>
+                </Link>
             </div>
         )
     }

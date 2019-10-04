@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Link from 'next/link'
 
 import './check.css'
 
@@ -25,7 +26,12 @@ class Content extends React.Component {
                     <input type="text" placeholder="장소"/>
                     <input type="text" placeholder="시간"/>
                 </div>
-                <button onClick={() => this.props.setComponentState(3)}>만들기</button>
+                <Link prefetch as={`/newletter/template`} href={`/newletter?componentState=template`}>
+                    <button>이전 단계</button>
+                </Link>
+                <Link prefetch as={`/newletter/complate`} href={`/newletter?componentState=complate`}>
+                    <button>완료 하기</button>
+                </Link>
             </div>
         )
     }

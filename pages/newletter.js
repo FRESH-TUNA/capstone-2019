@@ -23,23 +23,23 @@ class WriteLetter extends React.Component {
     super(props)
     this.state = { componentState: 0 }
     this.getComponent = this.getComponent.bind(this)
-    this.setComponentState = this.setComponentState.bind(this)
   }
 
-  setComponentState(index) {
-    this.setState({componentState: index})
+  static getInitialProps({query}) {
+    return {query}
   }
   
   getComponent() {
-    switch (this.state.componentState) {
-      case 0:
-        return <Content setComponentState={this.setComponentState} />
-      case 1:
-        return <Template setComponentState={this.setComponentState}/>
-      case 2:
-        return <Check setComponentState={this.setComponentState}/>
-      case 3:
-        return <Complete setComponentState={this.setComponentState}/>
+    console.log(this.props.query.componentState)
+    switch (this.props.query.componentState) {
+      case 'content':
+        return <Content/>
+      case 'template':
+        return <Template/>
+      case 'check':
+        return <Check/>
+      case 'complete':
+        return <Complete/>
     }
   }
 
@@ -64,5 +64,5 @@ const mapDispatchToProps = (dispatch) => ({
     Auth: bindActionCreators(Auth, dispatch),
     NewLetterAction: bindActionCreators(NewLetterAction, dispatch)
 })
-
-export default connect(mapStateToProps, mapDispatchToProps)(WriteLetter)
+export default WriteLetter
+// export default connect(mapStateToProps, mapDispatchToProps)(WriteLetter)

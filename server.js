@@ -9,12 +9,12 @@ app.prepare()
 .then(()=>{
     const server = express();
 
-    //커스텀 라우터 전후 비교 시 아래 부분을 주석 처리 후 확인해 보세요
-    // server.get('/board/:title', (req, res) => {
-    //     const page = '/boardView';
-    //     const params = {title: req.params.title}
-    //     app.render(req, res, page, params)
-    // });
+    // 커스텀 라우터 전후 비교 시 아래 부분을 주석 처리 후 확인해 보세요
+    server.get('/newletter/:componentState', (req, res) => {
+        const page = '/newletter';
+        const params = {componentState: req.params.componentState}
+        app.render(req, res, page, params)
+    });
 
     server.get('*', (req, res) => {
         return handle(req, res)
